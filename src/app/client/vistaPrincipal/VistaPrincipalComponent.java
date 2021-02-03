@@ -57,7 +57,7 @@ public class VistaPrincipalComponent {
             if (this.principalParqueaderoComponent == null) {
                 this.registrarContratoComponent = new RegistrarContratoComponent(this);
             }
-            vistaPrincipalTemplate.crearContenidoProductos(
+            vistaPrincipalTemplate.crearScrollpane(
                     registrarContratoComponent.getVistaPrincipalComponent()
             );
         }
@@ -73,7 +73,7 @@ public class VistaPrincipalComponent {
                     this.registrarParqueaderoComponent = new RegistrarParqueaderoComponent(this);
                 }
                 registrarParqueaderoComponent.limpiarDatos();
-                vistaPrincipalTemplate.crearContenidoProductos(
+                vistaPrincipalTemplate.crearScrollpane(
                         registrarParqueaderoComponent.getRegistrarParqueaderoTemplate()
                 );
                 break;
@@ -81,23 +81,20 @@ public class VistaPrincipalComponent {
                 if (this.EstadoParqueaderoComponent == null) {
                     this.EstadoParqueaderoComponent = new EstadoParqueaderoComponent(this);
                 }
-                vistaPrincipalTemplate.crearContenidoProductos(EstadoParqueaderoComponent.getEstadoParqueaderoTemplate()
+                vistaPrincipalTemplate.crearScrollpane(EstadoParqueaderoComponent.getEstadoParqueaderoTemplate()
                 );
                 break;
             case "Consultar Procesos":
-                if (this.consultarProcesosComponent == null) {
-                    this.consultarProcesosComponent = new ConsultarProcesosComponent(this);
-                }
-                vistaPrincipalTemplate.crearContenidoProductos(
+                this.consultarProcesosComponent = new ConsultarProcesosComponent(this);
+                vistaPrincipalTemplate.getpPrincipal().add(
                         consultarProcesosComponent.getConsultarProcesosTemplate()
                 );
 
                 break;
             case "Consultar Estadísticas":
-                if (this.consultaEstadisticasComponent == null) {
-                    this.consultaEstadisticasComponent = new ConsultaEstadisticasComponent(this);
-                }
-                vistaPrincipalTemplate.crearContenidoProductos(
+                this.consultaEstadisticasComponent = new ConsultaEstadisticasComponent(this);
+
+                vistaPrincipalTemplate.crearScrollpane(
                         consultaEstadisticasComponent.getConsultaEstadisticasTemplate()
                 );
                 break;
@@ -105,7 +102,7 @@ public class VistaPrincipalComponent {
                 if (this.registrarFuncionarioComponent == null) {
                     this.registrarFuncionarioComponent = new RegistrarFuncionarioComponent(this);
                 }
-                vistaPrincipalTemplate.crearContenidoProductos(
+                vistaPrincipalTemplate.crearScrollpane(
                         registrarFuncionarioComponent.getRegistrarFuncionarioTemplate()
                 );
                 break;
@@ -113,7 +110,7 @@ public class VistaPrincipalComponent {
                 if (this.registrarIngresoComponent == null) {
                     this.registrarIngresoComponent = new RegistrarIngresoComponent(this);
                 }
-                vistaPrincipalTemplate.crearContenidoProductos(
+                vistaPrincipalTemplate.crearScrollpane(
                         registrarIngresoComponent.getRegistrarIngresoTemplate()
                 );
                 break;
@@ -121,7 +118,7 @@ public class VistaPrincipalComponent {
                 if (this.generarFacturaComponent == null) {
                     this.generarFacturaComponent = new RegistrarSalidaComponent(this);
                 }
-                vistaPrincipalTemplate.crearContenidoProductos(
+                vistaPrincipalTemplate.crearScrollpane(
                         generarFacturaComponent.getRegistrarSalidaTemplate()
                 );
                 break;
@@ -129,7 +126,7 @@ public class VistaPrincipalComponent {
                 if (this.registrarContratoComponent == null) {
                     this.registrarContratoComponent = new RegistrarContratoComponent(this);
                 }
-                vistaPrincipalTemplate.crearContenidoProductos(
+                vistaPrincipalTemplate.crearScrollpane(
                         registrarContratoComponent.getVistaPrincipalComponent()
                 );
                 break;
@@ -137,7 +134,7 @@ public class VistaPrincipalComponent {
                 if (this.principalParqueaderoComponent == null) {
                     this.registrarContratoComponent = new RegistrarContratoComponent(this);
                 }
-                vistaPrincipalTemplate.crearContenidoProductos(
+                vistaPrincipalTemplate.crearScrollpane(
                         registrarContratoComponent.getVistaPrincipalComponent()
                 );
                 break;

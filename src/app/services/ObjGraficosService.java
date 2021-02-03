@@ -35,7 +35,7 @@ public class ObjGraficosService {
     private JTextField textField;
     private JPasswordField passwordField;
     private JTextArea textArea;
-    private JComboBox<String> comboBox;    
+    private JComboBox<String> comboBox;
     static private ObjGraficosService servicio;
 
     public JPanel construirJPanel(
@@ -107,7 +107,7 @@ public class ObjGraficosService {
     }
 
     public JCheckBox construirJCheckBox(
-            String texto, int x, int y, int ancho, int alto, Cursor cursor, 
+            String texto, int x, int y, int ancho, int alto, Cursor cursor,
             Font fuente, Color colorFuente
     ) {
         check = new JCheckBox(texto);
@@ -122,7 +122,7 @@ public class ObjGraficosService {
     }
 
     public JLabel construirJLabel(
-            String texto, int x, int y, int ancho, int alto, ImageIcon imagen, 
+            String texto, int x, int y, int ancho, int alto, ImageIcon imagen,
             Color colorFuente, Color colorFondo, Font fuente, String direccion
     ) {
         label = new JLabel(texto);
@@ -149,8 +149,8 @@ public class ObjGraficosService {
     }
 
     public JTextField construirJTextField(
-            String texto, int x, int y, int ancho, int alto, Color colorFondo, 
-            Color colorFuente, Color colorCaret, Font fuente, Border borde, 
+            String texto, int x, int y, int ancho, int alto, Color colorFondo,
+            Color colorFuente, Color colorCaret, Font fuente, Border borde,
             String direccion
     ) {
         textField = new JTextField();
@@ -176,8 +176,8 @@ public class ObjGraficosService {
     }
 
     public JPasswordField construirJPasswordField(
-            String texto, int x, int y, int ancho, int alto, Color colorFondo, 
-            Color colorFuente, Color colorCaret, Font fuente, Border borde, 
+            String texto, int x, int y, int ancho, int alto, Color colorFondo,
+            Color colorFuente, Color colorCaret, Font fuente, Border borde,
             String direccion) {
         passwordField = new JPasswordField();
         passwordField.setSize(ancho, alto);
@@ -201,7 +201,7 @@ public class ObjGraficosService {
     }
 
     public JTextArea construirJTextArea(
-            String texto, int x, int y, int ancho, int alto, Color colorFondo, 
+            String texto, int x, int y, int ancho, int alto, Color colorFondo,
             Color colorFuente, Color colorCaret, Font fuente, Border borde
     ) {
         textArea = new JTextArea();
@@ -217,7 +217,7 @@ public class ObjGraficosService {
     }
 
     public JComboBox<String> construirJComboBox(
-            String cadena, int x, int y, int ancho, int alto, Color colorFondo, 
+            String cadena, int x, int y, int ancho, int alto, Color colorFondo,
             Color colorFuente, String direccion
     ) {
         comboBox = new JComboBox<String>();
@@ -241,16 +241,17 @@ public class ObjGraficosService {
         }
         return comboBox;
     }
-    
+
     public Area dibujarBorde(
-    Component c, Graphics2D g2, Color color, int x, int y, int ancho, int alto, RectangularShape figura
-    ){
-        if(color == null)
+            Component c, Graphics2D g2, Color color, int x, int y, int ancho, int alto, RectangularShape figura
+    ) {
+        if (color == null) {
             g2.setPaint(c.getBackground());
-        else
+        } else {
             g2.setPaint(color);
+        }
         Area area = new Area(figura);
-        Rectangle rectangulo = new Rectangle(0,0,ancho,alto);
+        Rectangle rectangulo = new Rectangle(0, 0, ancho, alto);
         Area regionBorde = new Area(rectangulo);
         regionBorde.subtract(area);
         g2.setClip(regionBorde);
@@ -264,4 +265,3 @@ public class ObjGraficosService {
         return servicio;
     }
 }
-

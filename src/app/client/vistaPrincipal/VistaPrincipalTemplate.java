@@ -67,10 +67,10 @@ public class VistaPrincipalTemplate extends JFrame {
         return pPrincipal;
     }
 
-    public void crearContenidoProductos(JPanel panel){
+    public void crearScrollpane(JPanel panel){
         this.scrollpane = sObjGraficos.construirPanelBarra(panel, 0, 0, 898, 530, null, null);
         this.scrollpane.getVerticalScrollBar().setUI(sGraficosAvanzados.devolverScrollPersonalizado(
-            7, 10, Color.WHITE, sRecursos.getColorNaranja(), sRecursos.getColorAzulOscuro())
+            7, 10, Color.WHITE, sRecursos.getColorNaranja(), sRecursos.getColorSeleccion())
         );
         this.pPrincipal.add(scrollpane);
         this.scrollpane.revalidate();

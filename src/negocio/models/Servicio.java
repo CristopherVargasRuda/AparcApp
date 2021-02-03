@@ -4,7 +4,9 @@ public class Servicio {
 
     private String idServicio;
     private int valorPago, diaIngreso, mesIngreso, anioIngreso, diaSalida,
-            mesSalida, anioSalida;
+            mesSalida, anioSalida, horaIngreso, horaSalida;
+    private Vehiculo vehiculo;
+    private Parqueadero parqueadero;
 
     public Servicio() {
     }
@@ -71,6 +73,34 @@ public class Servicio {
 
     public void setAnioSalida(int anioSalida) {
         this.anioSalida = anioSalida;
+    }
+
+    public int getHoraIngreso() {
+        return horaIngreso;
+    }
+
+    public void setHoraIngreso(int horaIngreso) {
+        this.horaIngreso = horaIngreso;
+    }
+
+    public int getHoraSalida() {
+        return horaSalida;
+    }
+
+    public void setHoraSalida(int horaSalida) {
+        this.horaSalida = horaSalida;
+    }
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public Parqueadero getParqueadero() {
+        return parqueadero;
+    }
+
+    public void setParqueadero(Parqueadero parqueadero) {
+        this.parqueadero = parqueadero;
     }
 
 }

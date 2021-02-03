@@ -10,9 +10,10 @@ import javax.swing.border.Border;
 public class RecursosService {
 
     private Color colorNaranja, colorAzulOscuro, colorNavegacionFondo,
-            colorGris, colorSeleccion, colorRojo;
+            colorGris, colorSeleccion, colorRojo, colorGrisOscuro,
+            colorGrisClaro;
     private Font fontTituloUsuario, fontTituloPanel, fontNavegacion, fontText,
-            fontBoton, fontSeccion, fontComponente, fontLogo;
+            fontBoton, fontSeccion, fontComponente, fontLogo, fontLigera;
     private ImageIcon iCerrar, iMinimizar, iCarro, iLogo;
     private Border bordeNaranja, bordeNegro, bordeSeleccion, bordeSeccion,
             bordeRojo;
@@ -37,8 +38,10 @@ public class RecursosService {
         colorAzulOscuro = new Color(73, 106, 153);
         colorNavegacionFondo = new Color(221, 221, 221);
         colorGris = new Color(129, 129, 129);
-        colorSeleccion = new Color(249, 203, 156);
+        colorSeleccion = new Color(245, 191, 136);
         colorRojo = new Color(255, 26, 26);
+        colorGrisOscuro = new Color(80, 80, 80);
+        colorGrisClaro = new Color(249, 246, 249);
 
         fontTituloUsuario = new Font("Arial Rounded MT Bold", Font.PLAIN, 60);
         fontTituloPanel = new Font("Arial Rounded MT Bold", Font.PLAIN, 16);
@@ -48,6 +51,7 @@ public class RecursosService {
         fontSeccion = new Font("book antiqua", Font.PLAIN, 40);
         fontComponente = new Font("book antiqua", Font.PLAIN, 20);
         fontLogo = new Font("Arial", Font.PLAIN, 100);
+        fontLigera = new Font("LuzSans-Book", Font.PLAIN, 12);
 
         cMano = new Cursor(Cursor.HAND_CURSOR);
 
@@ -152,6 +156,18 @@ public class RecursosService {
 
     public Color getColorRojo() {
         return colorRojo;
+    }
+
+    public Font getFontLigera() {
+        return fontLigera;
+    }
+
+    public Color getColorGrisOscuro() {
+        return colorGrisOscuro;
+    }
+
+    public Color getColorGrisClaro() {
+        return colorGrisClaro;
     }
 
 }
